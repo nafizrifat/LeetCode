@@ -33,5 +33,31 @@ namespace LeetCode.Test._0001_0300
                 $"Expected indices {expected[0]} and {expected[1]} but got [{result[0]}, {result[1]}].");
         }
 
+        [TestMethod]
+        public void TestTwoSum_WithValidInput_ReturnsCorrectIndices2()
+        {
+            // Arrange
+            int[] nums = new int[] { 3, 2, 4 };
+            int target = 6;
+            // The expected indices for the numbers 2 and 4 (order does not matter).
+            int[] expected = new int[] { 1, 2 };
+
+            var solution = new _001_TwoSum();
+
+            // Act
+            int[] result = solution.TwoSum(nums, target);
+
+            // Assert
+            Assert.IsNotNull(result, "Result should not be null.");
+            Assert.AreEqual(2, result.Length, "Result should contain exactly two indices.");
+
+            // Since the order of the indices might vary, check that both expected indices are present.
+            bool hasFirstIndex = (result[0] == expected[0] || result[1] == expected[0]);
+            bool hasSecondIndex = (result[0] == expected[1] || result[1] == expected[1]);
+
+            Assert.IsTrue(hasFirstIndex && hasSecondIndex,
+                $"Expected indices {expected[0]} and {expected[1]} but got [{result[0]}, {result[1]}].");
+        }
+
     }
 }

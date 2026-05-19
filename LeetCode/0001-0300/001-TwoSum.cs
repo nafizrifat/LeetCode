@@ -41,18 +41,18 @@ namespace LeetCode._0001_0300
             {
 
                 //Calculate the complement needed to reach the target
-                int complement = target - nums[i];
+                int needed = target - nums[i];
 
                 //Check if the complement is already in the Dictionary
-                if (numDict.ContainsKey(complement))
+                if (numDict.ContainsKey(needed))
                 {
 
                     //if found, return the indexes as an array
-                    return new int[] { numDict[complement], i };
+                    return new int[] { numDict[needed], i };
                 }
 
                 //if not in the dictionaly then Add it
-                if (!numDict.ContainsKey(complement))
+                if (!numDict.ContainsKey(needed))
                 {
                     numDict[nums[i]] = i;
                 }

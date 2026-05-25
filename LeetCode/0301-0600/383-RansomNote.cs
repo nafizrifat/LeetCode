@@ -2,7 +2,7 @@
 // Link: https://leetcode.com/problems/ransom-note/
 //-----------------------------------------------------------------------------
 
-namespace LeetCode._0331_0600
+namespace LeetCode._0301_0600
 {
     public class _383_RansomNote
     {

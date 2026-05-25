@@ -1,7 +1,7 @@
 ﻿//-----------------------------------------------------------------------------
 // Link: https://leetcode.com/problems/first-unique-character-in-a-string/
 //-----------------------------------------------------------------------------
-namespace LeetCode._0331_0600
+namespace LeetCode._0301_0600
 {
     public class _387_FirstUniqueCharacterInaString
     {

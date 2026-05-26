@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LeetCode.Test._0331_600
+namespace LeetCode.Test._0301_600
 {
     [TestClass]
     public class _383_RansomNote_Test

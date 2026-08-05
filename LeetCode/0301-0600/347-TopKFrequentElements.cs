@@ -1,21 +1,33 @@
 ﻿//-----------------------------------------------------------------------------
 // Link: https://leetcode.com/problems/top-k-frequent-elements/
 // Algo Used: Dictionary + Bucket Sort
+// Pattern: Frequency Counting + Bucket Sort
 //
 // Main Concept:
-// Count each number's frequency, then place numbers into buckets where
-// bucket index = frequency.
+// Count each number's frequency, then place each number into a bucket where
+// the bucket index represents its frequency.
 //
 // Approach:
-// 1. Use Dictionary<int, int> to count frequency of each number.
-// 2. Create buckets of size nums.Length + 1 because max frequency can be nums.Length.
-// 3. Put each number into buckets[count].
-// 4. Traverse buckets from high frequency to low frequency.
-// 5. Add numbers to result until result.Count == k.
+// 1. Use Dictionary<int, int> to count the frequency of each number.
+// 2. Create buckets of size nums.Length + 1 because the maximum frequency
+//    of a number can be nums.Length.
+// 3. Place each number into buckets[frequency].
+// 4. Traverse the buckets from highest frequency to lowest frequency.
+// 5. Add numbers from each bucket to the result.
+// 6. Stop when the result contains k numbers.
+// 7. Convert the result to an array and return it.
+//
+// Edge Cases:
+// 1. The array contains only one number.
+// 2. All numbers appear with the same frequency.
+// 3. One number appears much more frequently than the others.
+// 4. The array contains negative numbers.
+// 5. k equals the number of unique values.
 //
 // Time Complexity: O(n)
 // Space Complexity: O(n)
 //-----------------------------------------------------------------------------
+
 
 using System.Xml.Linq;
 

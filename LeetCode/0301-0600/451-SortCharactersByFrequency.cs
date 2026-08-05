@@ -1,6 +1,32 @@
 ﻿//-----------------------------------------------------------------------------
 // Link: https://leetcode.com/problems/sort-characters-by-frequency/
+// Algo Used: Dictionary + Bucket Sort
+// Pattern: Frequency Counting
+//
+// Main Concept:
+// Count each character's frequency, then place characters into buckets where
+// the bucket index represents the character's frequency.
+//
+// Approach:
+// 1. Use Dictionary<char, int> to count each character in the string.
+// 2. Create buckets of size s.Length + 1 because the maximum frequency
+//    of a character can be s.Length.
+// 3. Place each character into buckets[frequency].
+// 4. Traverse the buckets from highest frequency to lowest frequency.
+// 5. Add each character to the result as many times as its frequency.
+// 6. Return the completed string.
+//
+// Edge Cases:
+// 1. The string contains only one character.
+// 2. Every character has the same frequency.
+// 3. One character appears more frequently than all other characters.
+// 4. Uppercase and lowercase characters are treated as different characters.
+//
+// Time Complexity: O(n)
+// Space Complexity: O(n)
 //-----------------------------------------------------------------------------
+
+
 using System.Text;
 
 namespace LeetCode._0301_0600

@@ -1,6 +1,28 @@
 ﻿//-----------------------------------------------------------------------------
 // Link: https://leetcode.com/problems/first-unique-character-in-a-string/
+// Algo Used: Dictionary
+// Pattern: Frequency Counting
+//
+// Main Concept:
+// Count how many times each character appears, then find the first character
+// whose frequency is exactly 1.
+//
+// Approach:
+// 1. Use Dictionary<char, int> to count each character in the string.
+// 2. Loop through the string again from left to right.
+// 3. Check the frequency of each character in the dictionary.
+// 4. Return the first index whose character count is 1.
+// 5. Return -1 if no unique character exists.
+//
+// Edge Cases:
+// 1. The string contains only one character.
+// 2. Every character appears more than once.
+// 3. The unique character appears at the beginning or end.
+//
+// Time Complexity: O(n)
+// Space Complexity: O(k), where k is the number of unique characters.
 //-----------------------------------------------------------------------------
+
 namespace LeetCode._0301_0600
 {
     public class _387_FirstUniqueCharacterInaString
